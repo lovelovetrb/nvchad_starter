@@ -1,12 +1,5 @@
 return {
-  {
-    "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
-    config = function()
-      require "configs.conform"
-    end,
-  },
-  -- These are some examples, uncomment them if you want to see them work!
+  { require "plugins.override.conform" },
   { require "plugins.override.nvim-lspconfig" },
   { require "plugins.override.mason" },
   { require "plugins.override.treesitter" },
@@ -15,4 +8,5 @@ return {
   { require "plugins.reinforcement.noice" },
   { require "plugins.reinforcement.markdown-preview" },
   { require "plugins.reinforcement.mason-lspconfig" },
+  { require "plugins.reinforcement.presene" },
 }
