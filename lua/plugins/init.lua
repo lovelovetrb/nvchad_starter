@@ -9,4 +9,5 @@ return {
   { require "plugins.reinforcement.markdown-preview" },
   { require "plugins.reinforcement.mason-lspconfig" },
   { require "plugins.reinforcement.presene" },
+  { require "plugins.reinforcement.todo-comments" },
 }
