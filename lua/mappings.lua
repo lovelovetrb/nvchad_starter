@@ -18,7 +18,7 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 map("n", "<leader>h", "^", { desc = "move beginning of line" })
 map("n", "<leader>l", "$", { desc = "move beginning of line" })
 
-map("n", "<leader>q", "<cmd>q<CR>", { desc = "quit" })
+map("n", "<leader>q", "<cmd>q!<CR>", { desc = "quit" })
 
 map("n", "<C-f>", function()
   require("conform").format { lsp_fallback = true }
