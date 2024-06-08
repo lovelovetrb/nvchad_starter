@@ -43,7 +43,10 @@ local function auto_activate_venv()
   if vim.fn.isdirectory(venv_path) == 1 then
     vim.env.VIRTUAL_ENV = venv_path
     vim.env.PATH = venv_path .. '/bin:' .. vim.env.PATH
-    print('Activated virtual environment: ' .. venv_path)
+    require("noice").redirect(function()
+      local notify = require('notify')
+      notify("activate -> " .. venv_path, "info", { title = "Activate venv" })
+    end)
   end
 end
 
