@@ -1,5 +1,6 @@
 return {
   { require "plugins.override.conform" },
+  { require "plugins.override.nvim-tree" },
   { require "plugins.override.nvim-lspconfig" },
   { require "plugins.override.mason" },
   { require "plugins.override.treesitter" },
