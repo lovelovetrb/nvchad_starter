@@ -13,8 +13,6 @@ map(
   { noremap = true, silent = true, expr = true, script = true, replace_keycodes = false }
 )
 
-map("n", ";", ":", { desc = "CMD enter command mode" })
-
 map("n", "<leader>h", "^", { desc = "move beginning of line" })
 map("n", "<leader>l", "$", { desc = "move beginning of line" })
 
