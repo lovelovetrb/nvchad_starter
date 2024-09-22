@@ -38,4 +38,35 @@ vim.schedule(function()
   require "mappings"
 end)
 
+local function auto_activate_venv()
+  local venv_path = vim.fn.getcwd() .. '/.venv'
+  if vim.fn.isdirectory(venv_path) == 1 then
+    vim.env.VIRTUAL_ENV = venv_path
+    vim.env.PATH = venv_path .. '/bin:' .. vim.env.PATH
+    require("noice").redirect(function()
+      local notify = require('notify')
+      notify("activate -> " .. venv_path, "info", { title = "Activate venv" })
+    end)
+  end
+end
+
+vim.api.nvim_create_autocmd('VimEnter', {
+  callback = function()
+    auto_activate_venv()
+  end
+})
+
 require "configs.mason"
+
+vim.g.clipboard = {
+  name = 'WslClipboard',
+  copy = {
+    ['+'] = 'clip.exe',
+    ['*'] = 'clip.exe',
+  },
+  paste = {
+    ['+'] = 'pwsh.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+    ['*'] = 'pwsh.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+  },
+  cache_enabled = 0,
+}

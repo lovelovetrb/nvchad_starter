@@ -1,5 +1,6 @@
 return {
   { require "plugins.override.conform" },
+  { require "plugins.override.nvim-tree" },
   { require "plugins.override.nvim-lspconfig" },
   { require "plugins.override.mason" },
   { require "plugins.override.treesitter" },
@@ -9,4 +10,5 @@ return {
   { require "plugins.reinforcement.markdown-preview" },
   { require "plugins.reinforcement.mason-lspconfig" },
   { require "plugins.reinforcement.presene" },
+  { require "plugins.reinforcement.todo-comments" },
 }
