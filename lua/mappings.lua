@@ -27,3 +27,5 @@ end, { desc = "formatting" })
 -- end)
 
 map("v", "v", "$h", { desc = "行末まで選択" })
+
+map("t", "jj", vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true))
