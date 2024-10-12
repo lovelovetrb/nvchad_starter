@@ -5,7 +5,7 @@
 local M = {}
 
 M.ui = {
-  theme = "bearded-arc",
+  theme = "vscode_dark",
   transparency = true,
   nvdash = {
     load_on_startup = true,
