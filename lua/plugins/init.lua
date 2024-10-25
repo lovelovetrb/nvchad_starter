@@ -8,6 +8,7 @@ return {
   { require "plugins.reinforcement.vim-wakatime" },
   { require "plugins.reinforcement.noice" },
   { require "plugins.reinforcement.markdown-preview" },
+  { require "plugins.reinforcement.render-markdown" },
   { require "plugins.reinforcement.mason-lspconfig" },
   { require "plugins.reinforcement.presene" },
   { require "plugins.reinforcement.todo-comments" },

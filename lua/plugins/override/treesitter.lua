@@ -24,6 +24,7 @@ return {
       -- template files
       "yaml",
       "gitignore",
+      "markdown"
     },
   },
 }

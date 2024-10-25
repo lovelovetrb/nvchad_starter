@@ -9,7 +9,8 @@ require("mason-lspconfig").setup {
     "eslint",
     "tsserver",
 
-    "pyright",
+    "ruff",
+    "ruff-lsp",
   },
 }
 
