@@ -7,10 +7,8 @@ require("mason-lspconfig").setup {
     "cssls",
     "tailwindcss",
     "eslint",
-    "tsserver",
 
     "ruff",
-    "ruff-lsp",
   },
 }
 
