@@ -6,9 +6,16 @@ require("mason-lspconfig").setup {
     "html",
     "cssls",
     "tailwindcss",
+    "typescript-language-server",
     "eslint",
+    "biome",
 
+    "python-lsp-server",
     "ruff",
+    "ruff-lsp",
+
+    "clang-format",
+    "clangd",
   },
 }
 
