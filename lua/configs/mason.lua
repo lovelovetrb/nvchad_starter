@@ -1,22 +1,5 @@
 require("mason").setup()
-require("mason-lspconfig").setup {
-  ensure_installed = {
-    "lua_ls",
-    -- "stylua",
-
-    "html",
-    "cssls",
-    "tailwindcss",
-    "ts_ls",
-    "eslint",
-    "biome",
-
-    "pylsp",
-
-    -- "clang-format",
-    "clangd",
-  },
-}
+require("mason-lspconfig").setup {}
 
 local nvchad_defaults = require "nvchad.configs.lspconfig"
 local custom_handlers = {
