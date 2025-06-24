@@ -7,7 +7,7 @@ local M = {}
 
 M = {
   base46 = {
-    theme = "nightowl",
+    theme = "palenight",
     transparency = true,
   },
 
@@ -23,10 +23,11 @@ M = {
     telescope = { style = "borderless" }, -- borderless / bordered
 
     statusline = {
-      theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
+      -- theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
+      theme = "default", -- default/vscode/vscode_colored/minimal
       -- default/round/block/arrow separators work only for default statusline theme
       -- round and block will work for minimal theme only
-      separator_style = "arrow",
+      separator_style = "round",
       order = nil,
       modules = nil,
     },
@@ -99,7 +100,7 @@ M = {
   lsp = { signature = true },
 
   cheatsheet = {
-    theme = "simple",                                                   -- simple/grid
+    theme = "grid",                                                     -- simple/grid
     excluded_groups = { "terminal (t)", "autopairs", "Nvim", "Opens" }, -- can add group name or with mode
   },
 
