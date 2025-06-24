@@ -13,8 +13,8 @@ map(
 )
 
 -- ### Normal Mode
-map("n", "<leader>h", "^", { desc = "move beginning of line" })
-map("n", "<leader>l", "$", { desc = "move ending of line" })
+map("n", "H", "^", { desc = "move beginning of line" })
+map("n", "L", "$", { desc = "move ending of line" })
 
 map("n", "<leader>q", "<cmd>q!<CR>", { desc = "quit" })
 
