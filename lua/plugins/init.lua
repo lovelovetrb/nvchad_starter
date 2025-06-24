@@ -12,5 +12,7 @@ return {
   { require "plugins.reinforcement.mason-lspconfig" },
   { require "plugins.reinforcement.presene" },
   { require "plugins.reinforcement.todo-comments" },
-  { require "plugins.reinforcement.lazygit" }
+  { require "plugins.reinforcement.lazygit" },
+  { require "plugins.reinforcement.nvim-ts-autotag" },
+  { require "plugins.colorscheme.everforest" }
 }
