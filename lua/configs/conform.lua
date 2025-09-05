@@ -1,22 +1,25 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
-    html = { "biome" },
-    css = { "biome" },
+    html = { "biome-check", "prettier" },
+    css = { "biome-check", "prettier" },
     python = {
-      -- To fix auto-fixable lint errors.
       "ruff_fix",
-      -- To run the Ruff formatter.
       "ruff_format",
-      -- To organize the imports.
       "ruff_organize_imports",
     },
+    -- javascript = { "biome-organize-imports", "biome", "prettier" },
+    javascript = { "biome-check", "biome", "prettier" },
+    typescript = { "biome-check", "prettier" },
+    javascriptreact = { "biome-check", "prettier" },
+    typescriptreact = { "biome-check", "prettier" },
+    yaml = { "yq" },
+    json = { "jq" },
   },
-
-  format_on_save = {
-    -- These options will be passed to conform.format()
+  format_on_save = false,
+  default_format_opts = {
     timeout_ms = 500,
-    lsp_fallback = true,
+    lsp_format = "fallback",
   },
 }
 

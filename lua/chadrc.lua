@@ -7,7 +7,7 @@ local M = {}
 
 M = {
   base46 = {
-    theme = "palenight",
+    theme = "aquarium",
     transparency = true,
   },
 

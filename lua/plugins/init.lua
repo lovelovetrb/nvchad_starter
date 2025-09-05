@@ -14,5 +14,7 @@ return {
   { require "plugins.reinforcement.todo-comments" },
   { require "plugins.reinforcement.lazygit" },
   { require "plugins.reinforcement.nvim-ts-autotag" },
+  { require "plugins.reinforcement.overlook" },
+  { require "plugins.reinforcement.remote-nvim" },
   { require "plugins.colorscheme.everforest" }
 }
