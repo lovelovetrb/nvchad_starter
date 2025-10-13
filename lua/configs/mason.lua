@@ -8,11 +8,11 @@ require("mason-lspconfig").setup {
     "tailwindcss",
 
     "ts_ls",
-    "biome",
+    -- "biome",
     -- "eslint",
 
     "pylsp",
-    "pyrefly",
+    -- "pyrefly",
 
     "clangd",
 
@@ -45,6 +45,21 @@ vim.lsp.config("pylsp", {
       },
     },
   },
+})
+
+vim.lsp.config("biome", {
+  on_attach = function(client, bufnr)
+    nvchad_defaults.on_attach(client, bufnr)
+
+    client.server_capabilities.documentFormattingProvider = false
+    client.server_capabilities.documentRangeFormattingProvider = false
+
+    print("Biome LSP attached from: " .. (client.config.cmd and table.concat(client.config.cmd, " ") or "unknown"))
+  end,
+  capabilities = nvchad_defaults.capabilities,
+  on_init = nvchad_defaults.on_init,
+
+  single_file_support = false,
 })
 
 -- For other servers, use the wildcard to apply default settings
